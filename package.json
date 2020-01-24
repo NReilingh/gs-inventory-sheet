@@ -1,0 +1,23 @@
+{
+  "name": "gs-inventory-sheet",
+  "version": "0.0.2",
+  "main": "Code.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NReilingh/gs-inventory-sheet.git"
+  },
+  "author": "Nick Reilingh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NReilingh/gs-inventory-sheet/issues"
+  },
+  "homepage": "https://github.com/NReilingh/gs-inventory-sheet#readme",
+  "dependencies": {
+    "unsafe-hash-words": "github:NReilingh/unsafe-hash-words#master"
+  },
+  "devDependencies": {}
+}
