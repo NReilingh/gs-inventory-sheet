@@ -1,7 +1,7 @@
 {
   "name": "gs-inventory-sheet",
   "version": "0.0.2",
-  "main": "Code.js",
+  "main": "Code.ts",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/NReilingh/gs-inventory-sheet#readme",
   "dependencies": {
+    "@types/google-apps-script": "^1.0.10",
     "unsafe-hash-words": "github:NReilingh/unsafe-hash-words#master"
   },
   "devDependencies": {}
