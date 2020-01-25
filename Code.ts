@@ -1,38 +1,19 @@
-APP_DOMAIN = 'https://concrete-smartphone.glitch.me/';
+const HASH_WORDS = 'https://us-central1-hashwords.cloudfunctions.net/hashWords';
 
-function HASHWORD(input) {
-  if (typeof input === 'undefined') return null;
-  if (typeof input === 'number') {
-    input = input.toString();
-  }
-  if (!input.hasOwnProperty('length') || input.length < 1) return null;
-  var response = UrlFetchApp.fetch(APP_DOMAIN + 'unsafehashword/' + encodeURIComponent(input));
-  return response.getContentText();
-}
-function HASHTHING(input) {
-  if (typeof input === 'undefined') return null;
-  if (typeof input === 'number') {
-    input = input.toString();
-  }
-  if (!input.hasOwnProperty('length') || input.length < 1) return null;
-  var response = UrlFetchApp.fetch(APP_DOMAIN + 'unsafehashthing/' + encodeURIComponent(input));
-  return response.getContentText();
-}
-function HASHNOUN(input) {
-  if (typeof input === 'undefined') return null;
-  if (typeof input === 'number') {
-    input = input.toString();
-  }
-  if (!input.hasOwnProperty('length') || input.length < 1) return null;
-  var response = UrlFetchApp.fetch(APP_DOMAIN + 'unsafehashnoun/' + encodeURIComponent(input));
-  return response.getContentText();
-}
 function HASHHOST(input, prefix) {
   if (typeof input === 'undefined') return null;
   if (typeof input === 'number') {
     input = input.toString();
   }
   if (!input.hasOwnProperty('length') || input.length < 1) return null;
-  var response = UrlFetchApp.fetch(APP_DOMAIN + 'unsafehashhost/' + encodeURIComponent(input) + '/' + encodeURIComponent(prefix));
+  const length = 15 - prefix.length;
+  var response = UrlFetchApp.fetch(HASH_WORDS, {
+    method: "post",
+    contentType: "application/json",
+    payload: JSON.stringify({
+      stringData: input,
+      length: length
+    })
+  });
   return prefix + response.getContentText().toUpperCase();
 }

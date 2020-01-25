@@ -16,9 +16,7 @@
     "url": "https://github.com/NReilingh/gs-inventory-sheet/issues"
   },
   "homepage": "https://github.com/NReilingh/gs-inventory-sheet#readme",
-  "dependencies": {
-    "@types/google-apps-script": "^1.0.10",
-    "unsafe-hash-words": "github:NReilingh/unsafe-hash-words#master"
-  },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/google-apps-script": "^1.0.10"
+  }
 }
